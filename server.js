@@ -1,9 +1,10 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const app = express();
 
 // mongoose.connect('mongodb+srv://general:general@cluster0-yu4bb.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true })
-
+app.use(express.static(path.join(__dirname, './static')));
 app.use(express.json());
 
 //Allow cors
