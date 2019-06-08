@@ -65,7 +65,7 @@ app.get('/api/form/:form', (req, res) => {
 })
 
 app.post('/api/form/1', (req, res) => {
-  
+
   MongoClient.connect(mongoUrl, {
     useNewUrlParser: true
   }, (err, db) => {
@@ -73,15 +73,15 @@ app.post('/api/form/1', (req, res) => {
       console.log(err);
       process.exit(0);
     }
-    var database = db.db('root');    
+    var database = db.db('root');
     var collection = database.collection('formfeedback');
     collection.insertMany([req.body], (err, result) => {
-        if(err) {
-          res.send(errorResponse);
-            process.exit(0);
-        }
-        res.send(successResponse);
-        db.close();
+      if (err) {
+        res.send(errorResponse);
+        process.exit(0);
+      }
+      res.send(successResponse);
+      db.close();
     });
   });
 });
@@ -94,16 +94,39 @@ app.post('/api/form/2', (req, res) => {
       console.log(err);
       process.exit(0);
     }
-    var database = db.db('root');    
+    var database = db.db('root');
     var collection = database.collection('formincident');
     collection.insertMany([req.body], (err, result) => {
-        if(err) {
-            res.send(errorResponse);
-            process.exit(0);
-        }
-        res.send(successResponse);
-        db.close();
+      if (err) {
+        res.send(errorResponse);
+        process.exit(0);
+      }
+      res.send(successResponse);
+      db.close();
     });
+  });
+});
+
+app.get('/api/raport', (req, res) => {
+  MongoClient.connect(mongoUrl, {
+    useNewUrlParser: true
+  }, (err, db) => {
+    if (err) {
+      console.log(err);
+      process.exit(0);
+    }
+    var database = db.db('root');
+    var collection = database.collection('formfeedback');
+
+    collection.find({}, {
+      projection: {
+        etapa_eveniment: true
+      }
+    }).toArray((err, result) => {
+      res.send(result);
+    })
+
+    db.close();
   });
 });
 
