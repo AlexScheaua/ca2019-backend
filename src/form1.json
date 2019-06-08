@@ -134,7 +134,7 @@
     },
     {
         "label": "În ce spital s-a produs acest eveniment advers?",
-        "type": "radio",
+        "type": "adresa",
         "options": [
             "Lista spitale din țară – se selectează județ/localitatea aferenta acelui județ unde exista spitale/spitalul din orașul selectat; se poate alege soluția județ/spitalele din județ; se poate alege interfață pornind de la harta senzitivă cu județele",
             "Nu doresc să specific spitalul"
