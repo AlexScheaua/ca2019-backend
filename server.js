@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
-// mongoose.connect('mongodb+srv://general:general@cluster0-yu4bb.mongodb.net/test?retryWrites=true&w=majority')
+// mongoose.connect('mongodb+srv://general:general@cluster0-yu4bb.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true })
 
 app.use(express.json());
 
@@ -32,7 +32,7 @@ app.get('/api/form/:form', (req, res) => {
     
 })
 
-app.put('', () => {
+app.post('/api/form/:form', (req,res) => {
 
 })
 
