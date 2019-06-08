@@ -4,6 +4,7 @@ const MongoClient = require('mongodb')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const HtmlResponse = require('./src/htmlResponse');
+const fs = require('fs');
 
 const app = express();
 
@@ -46,6 +47,9 @@ app.get('/api/hospitallist', (req, res) => {
   res.status(200).send(hList);
 })
 
+let successResponse = fs.readFileSync(__dirname + '/src/html/successResponse.html', 'utf8');
+let errorResponse = fs.readFileSync(__dirname + '/src/html/errorResponse.html', 'utf8');
+
 app.get('/api/form/:form', (req, res) => {
   console.log(req.params.form);
 
@@ -73,10 +77,10 @@ app.post('/api/form/1', (req, res) => {
     var collection = database.collection('formfeedback');
     collection.insertMany([req.body], (err, result) => {
         if(err) {
-          res.send(HtmlResponse.putErrorResponse);
+          res.send(errorResponse);
             process.exit(0);
         }
-        res.send(HtmlResponse.putSuccessResponse);
+        res.send(successResponse);
         db.close();
     });
   });
@@ -94,10 +98,10 @@ app.post('/api/form/2', (req, res) => {
     var collection = database.collection('formincident');
     collection.insertMany([req.body], (err, result) => {
         if(err) {
-            res.send(HtmlResponse.putErrorResponse);
+            res.send(errorResponse);
             process.exit(0);
         }
-        res.send(HtmlResponse.putSuccessResponse);
+        res.send(successResponse);
         db.close();
     });
   });
