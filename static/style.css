@@ -5,13 +5,14 @@ body {
 .main{
   margin: auto;
   width: 80%;
+  height: 100vh;
+  border-radius: 10px;
+  background-color: #eee;
 }
 
 .header{
   display: flex;
   margin-top: 30px;
-
-
 }
 
 i{
@@ -28,8 +29,6 @@ h2{
   padding: 30px;
   text-align: center;
   font-weight: bold;
-
-
 }
 
 p{
@@ -41,9 +40,11 @@ p{
   text-align: center;
   position: relative;
 }
+
 .pad{
   margin: 15px;
 }
+
 .footer{
  text-align: center;
 }
@@ -52,11 +53,14 @@ p{
   width: 80%;
   margin-top: 50px;
 }
-
+.btn {
+  transition: .3s;
+  box-shadow: 0 0 5px #aaa;
+}
 .btn:hover {
   background-color: #002B7F;
+  transform: scale(1.1);
 }
-
 
 @media screen and (max-width: 600px) {
   h2 {

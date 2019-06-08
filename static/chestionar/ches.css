@@ -1,28 +1,59 @@
-form, h1 {
-margin: 0 auto;
-margin-top:100px;
+.container {
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #aaa;
 }
+
+h1 {
+  font-weight: 100;
+  text-shadow: 0 0 3px #bbb;
+}
+
+.form-container {
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #aaa;
+}
+
+.form-group {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.form-check:hover {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.badge {
+  box-shadow: 0 0 3px #aaa;
+  white-space: pre-wrap;
+  font-size: 100%;
+  width: 100%;
+}
+
 .submit {
 margin: 0 auto;
 position: relative;
 }
+
+.selectpicker{
+  width: 150px;
+}
+
 .submit input {
   margin-bottom: 40px;
-
-
 }
 
-legend {
-  font-weight: bolder;
-  font-size: 20px;
-}
 input {
  display:block;
  margin-top: 20px;
 }
 
-  input[type="radio"] {
-    width:18px;
-    height:18px;
+input[type="radio"] {
+  width:18px;
+  height:18px;
 
-  }
+}

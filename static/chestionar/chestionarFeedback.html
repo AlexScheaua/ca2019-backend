@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="ches.css">
+  <style media="screen">
+    legend {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+
+    input {
+      display: block;
+      margin-top: 20px;
+    }
+
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+  <title></title>
+</head>
+
+<body onload="getQuestions()">
+  <div class="container p-3 mt-5">
+    <h1 class="text-primary text-center col-xs-12">Chestionar anonim privind evaluarea spitalizarii</h1>
+  </div>
+
+  <div class="form-container container-fluid p-5 mt-5 d-flex flex-column align-items-center col-lg-6 col-md-9 col-sm-12">
+    <form class="col-xs-12" id="form" action="https://ca2019-backend.herokuapp.com/api/form/1"
+      method="post">
+    </form>
+  </div>
+
+  <script src="chestionarFeedback.js">
+  </script>
+
+</body>
+
+</html>
