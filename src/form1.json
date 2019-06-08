@@ -1,6 +1,6 @@
 [
     {
-        "label": "Cine sunteti?[1 răspuns]",
+        "label": "Cine sunteti?",
         "type": "radio",
         "name": "cine_sunteti",
         "options": [
@@ -10,7 +10,7 @@
         ]
     },
     {
-        "label": "De care etapa de ingrijire este legat evenimentul advers?[1 răspuns]",
+        "label": "De care etapa de ingrijire este legat evenimentul advers?",
         "type": "radio",
         "name": "etapa_eveniment",
         "options": [
@@ -19,17 +19,17 @@
             "Tratament",
             "Externare",
             "Urmarirea post spitalizare",
-            "Alt moment"
+            "Alt moment................."
         ]
     },
     {
-        "label": "Care considerati ca este cauza evenimentul advers: :   [1 sau mai multe răspunsuri posibile]",
+        "label": "Care considerati ca este cauza evenimentul advers:",
         "type": "checkbox",
-        "name": "eveniment_advers",
+        "name": "eveniment_advers1",
         "options": [
             "Disponibilitatea personalului",
             "Coordonarea ingrijirilor",
-            "Echipamente / dispozitive",
+            "Echipamente/dispozitive",
             "Infectii",
             "Probleme de comunicare",
             "Probleme legate de medicatie",
@@ -42,16 +42,18 @@
     },
     {
         "label": "Va rugam sa descrieti ce s-a intamplat:",
-        "type": "text area",
+        "type": "textarea",
+        "name": "descrieti_intamplarea",
         "rows": 4
     },
     {
         "label": "Va rugam sa ne spuneti pentru ce afectiune era tratat pacientul:",
-        "type": "text area",
+        "type": "textarea",
+        "name": "spuneti_afectiunea",
         "rows": 4
     },
     {
-        "label": "Considerați că pacientul a suferit o vătămare fizică sau psihologică?[1 răspuns]",
+        "label": "Considerați că pacientul a suferit o vătămare fizică sau psihologică?",
         "type": "radio",
         "name": "vatamare_pacient",
         "options": [
@@ -60,7 +62,7 @@
         ]
     },
     {
-        "label": "Cât de gravă a fost suferința pacientului determinată de evenimentul produs?[1 răspuns]",
+        "label": "Cât de gravă a fost suferința pacientului determinată de evenimentul produs?",
         "type": "radio",
         "name": "gravitate_suferinta",
         "options": [
@@ -72,13 +74,14 @@
         ]
     },
     {
-        "label": "Puteți detalia cum a fost afectat pacientul de această experiență?  (opțional, se poate renunța la aceasta întrebare)",
+        "label": "Puteți detalia cum a fost afectat pacientul de această experiență?",
         "type": "text area",
+        "name": "detaliati_experienta",
         "rows": 4
     },
     {
-        "label": "Unde s-a produs evenimentul advers:",
-        "type": "checkbox",
+        "label": "Unde s-a produs evenimentul advers?",
+        "type": "radio",
         "name": "eveniment_advers",
         "options": [
             "Cabinet medicina familiei",
@@ -88,56 +91,57 @@
             "Cabinet dentar",
             "Cabinet specialitate în ambulatoriu",
             "Laborator analize medicale",
-            "Centru imagistica / radiologie",
-            {
-                "label": "Spital/secție de boli psihice",
-                "type": "radio",
-                "options": [
-                    "Ambulatoriu – LSM",
-                    "Secție spital",
-                    "Unitate specială",
-                    "Curte",
-                    "Alte"
-                ]
-            },
-            {
-                "label":"Spital",
-                "type": "radio",
-                "options": [
-           	        "UPU/Cameră de gardă",
-            	    "Cabinet ambulatoriu integrat",
-                    "Secție internare de zi",
-                    "Sala de operație",
-                    "Terapie intensivă",
-                    "Secție cu paturi (internare continuă)",
-                    "Curte",
-                    "Altele"
-                ]
-            },
-            {
-                "label":"Ambulanță/SMURD",
-                "type": "radio",
-                "options": [
-            	    "În timpul convorbirii telefonice",
-            	    "În timpul consultației la domiciliu",
-            	    "În vehicul",
-                    "Alte"
-                ]
-            },
-         "Altele locații"
+            "Centru imagistica/radiologie"
         ]
     },
     {
-        "label":"În ce spital s-a produs acest eveniment advers?",
-         "type": "radio",
+        "label": "Spital/secție de boli psihice",
+        "type": "radio",
+        "name": "spital_sectie",
         "options": [
-            	    "Lista spitale din țară – se selectează județ / localitatea aferenta acelui județ unde exista spitale/spitalul din orașul selectat; se poate alege soluția județ/spitalele din județ; se poate alege interfață pornind de la harta senzitivă cu județele",
-            	    "Nu doresc să specific spitalul"  	    
-         ]
-
+            "Ambulatoriu – LSM",
+            "Secție spital",
+            "Unitate specială",
+            "Curte",
+            "Alte"
+        ]
     },
     {
-        "label": "Vă rugăm precizați ce tip de îngrijiri a primit pacientul în timpul internării?[1 sau mai multe răspunsuri]",
+        "label": "Spital",
+        "type": "radio",
+        "name": "spital",
+        "options": [
+            "UPU/Cameră de gardă",
+            "Cabinet ambulatoriu integrat",
+            "Secție internare de zi",
+            "Sala de operație",
+            "Terapie intensivă",
+            "Secție cu paturi (internare continuă)",
+            "Curte",
+            "Altele"
+        ]
+    },
+    {
+        "label": "Ambulanță/SMURD",
+        "type": "radio",
+        "name": "ambulanta",
+        "options": [
+            "În timpul convorbirii telefonice",
+            "În timpul consultației la domiciliu",
+            "În vehicul",
+            "Alte"
+        ]
+    },
+    {
+        "label": "În ce spital s-a produs acest eveniment advers?",
+        "type": "radio",
+        "options": [
+            "Lista spitale din țară – se selectează județ/localitatea aferenta acelui județ unde exista spitale/spitalul din orașul selectat; se poate alege soluția județ/spitalele din județ; se poate alege interfață pornind de la harta senzitivă cu județele",
+            "Nu doresc să specific spitalul"
+        ]
+    },
+    {
+        "label": "Vă rugăm precizați ce tip de îngrijiri a primit pacientul în timpul internării?",
         "type": "checkbox",
         "name": "tip_ingrijiri",
         "options": [
@@ -150,16 +154,18 @@
         ]
     },
     {
-        "label":"Când s-a produs evenimentul?[1 răspuns posibil]",
-         "type": "radio",
+        "label": "Când s-a produs evenimentul?",
+        "type": "radio",
+        "name": "producere_eveniment",
         "options": [
             "Data:______",
             "Nu cunosc data"
         ]
     },
     {
-        "label":"Când a observat pacientul că a avut loc evenimentul advers?[1 răspuns]",
+        "label": "Când a observat pacientul că a avut loc evenimentul advers",
         "type": "radio",
+        "name": "observare_pacient",
         "options": [
             "Imediat",
             "Mai târziu",
@@ -167,8 +173,9 @@
         ]
     },
     {
-        "label":"În ce interval orar s-a produs evenimentul?[1 răspuns]",
+        "label": "În ce interval orar s-a produs evenimentul?",
         "type": "radio",
+        "name": "interval",
         "options": [
             "Ziua (7,00 – 14,00)",
             "După-amiază (14,00-21,00)",
@@ -177,8 +184,9 @@
         ]
     },
     {
-        "label":"Ce categorii de personal au fost implicate în acest incident?[1 sau mai multe răspunsuri]",
+        "label": "Ce categorii de personal au fost implicate în acest incident?",
         "type": "checkbox",
+        "name": "categorii_personal",
         "options": [
             "Personal ambulanță",
             "Medic",
@@ -192,83 +200,89 @@
             "Vizitator",
             "Nu cunosc",
             "Alții"
-           
         ]
     },
     {
-        "label":"Ați fost anunțat de personalul medical că a avut loc un eveniment advers asociat asistenței medicale?",
+        "label": "Ați fost anunțat de personalul medical că a avut loc un eveniment advers asociat asistenței medicale?",
         "type": "radio",
+        "name": "asociat_asistentei",
         "options": [
             "Da",
             "Nu",
             "Nu sunt sigur"
-            
         ]
     },
     {
-        "label":"Dacă ați fost anunțat, vi s-au precizat:   [1 sau mai multe răspunsuri]",
+        "label": "Dacă ați fost anunțat, vi s-au precizat",
         "type": "checkbox",
+        "name": "precizat",
         "options": [
             "cauzele",
             "consecințele posibile",
             "modificarea planului terapeutic",
             "măsuri necesare a fi urmate",
             "... alte "
-           
         ]
     },
     {
-        "label":"Sexul:",
-        "type":"radio",
-        "options":[
+        "label": "Sexul:",
+        "type": "radio",
+        "name": "sexul",
+        "options": [
             "Masculin",
             "Feminin",
             "Nu cunosc"
-         ]
-
+        ]
     },
     {
-        "label":"In ce grupă de vârstă poate fi încadrat pacientul?",
-        "type":"radio",
-        "options":[
-           "Sub 1 an",
-           "1-4 ani",
-           "4-15 ani",
-           "16-25 ani",
-           "25-34 ani",
-           "35-44 ani",
-           "45-54 ani",
-           "55-64 ani",
-           "65-74 ani",
-           "75-84 ani",
-           "Peste 85 ani"
-        ]      
+        "label": "In ce grupă de vârstă poate fi încadrat pacientul?",
+        "type": "radio",
+        "name": "grupa_de_varsta",
+        "options": [
+            "Sub 1 an",
+            "1-4 ani",
+            "4-15 ani",
+            "16-25 ani",
+            "25-34 ani",
+            "35-44 ani",
+            "45-54 ani",
+            "55-64 ani",
+            "65-74 ani",
+            "75-84 ani",
+            "Peste 85 ani"
+        ]
     },
     {
-        "label":"Ați anunțat acest eveniment la alte instituții?",
-        "type":"radio",
-        "options":[
+        "label": "Ați anunțat acest eveniment la alte instituții?",
+        "type": "radio",
+        "name": "ati_anuntat",
+        "options": [
             "Nu",
             "Da"
         ]
-
     },
     {
-        "label":"Completati Institutia:",
-        "type":"text"
+        "label": "Completati Institutia:",
+        "type": "text",
+        "name": "completati_institutia"
     },
     {
-        "label":"Doriți să ne mai spuneți ceva legat de acest eveniment advers?",
-        "type":"textarea"
-        
+        "label": "Doriți să ne mai spuneți ceva legat de acest eveniment advers?",
+        "type": "textarea",
+        "name": "altceva",
+        "rows": 4
     },
     {
-        "label":"onsiderați că acest sistem de anunțare al evenimentelor adverse este util? (Vă rugăm apreciați de la 0 la 5, unde 0=nu este util; 5= foarte util)     [sau scală 1-5]",
-        "type":"radio",
-        "options":[
-            0,1,2,3,4,5
+        "label": "Considerați că acest sistem de anunțare al evenimentelor adverse este util? (Vă rugăm apreciați de la 0 la 5, unde 0=nu este util; 5= foarte util)     [sau scală 1-5]",
+        "type": "radio",
+        "name": "este_util",
+        "options": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
         ]
-        
     }
-
 ]

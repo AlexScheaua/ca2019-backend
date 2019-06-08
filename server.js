@@ -14,7 +14,7 @@ app.all('*', (req, res, next) => {
     next();
 });
 
-app.get('/api/hospitallist', async (req, res) => {
+app.get('/api/hospitallist', (req, res) => {
     let hList = require('./src/listaSpitale.json');
     res.status(200).send(hList);
 })
@@ -25,11 +25,15 @@ app.get('/api/form/:form', (req, res) => {
     if(req.params.form == 1){
         let form = require('./src/form1.json');
         res.status(200).send(form);
-    } else {
+    } else if(req.params.form == 2){
         let form = require('./src/form2.json');
         res.status(200).send(form);
     }
     
+})
+
+app.put('', () => {
+
 })
 
 const port = process.env.PORT || 3000;
