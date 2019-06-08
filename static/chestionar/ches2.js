@@ -26,7 +26,7 @@ async function ajax(method, url, body, callback, rejectCallback) {
 };
 
 async function getQuestions() {
-  await ajax("GET", "https://ca2019-backend.herokuapp.com/api/form/1", undefined, function(answer) {
+  await ajax("GET", "https://ca2019-backend.herokuapp.com/api/form/2", undefined, function(answer) {
     config = answer;
     draw();
   })
