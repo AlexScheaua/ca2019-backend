@@ -3,7 +3,7 @@ const path = require('path');
 const MongoClient = require('mongodb')
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const HtmlResponse = require('./src/HtmlResponse');
+const HtmlResponse = require('./src/htmlResponse');
 
 const app = express();
 
@@ -57,7 +57,7 @@ app.get('/api/form/:form', (req, res) => {
     res.status(200).send(form);
   }
 
-  
+
 })
 
 app.post('/api/form/1', (req, res) => {
@@ -94,7 +94,7 @@ app.post('/api/form/2', (req, res) => {
     var collection = database.collection('formincident');
     collection.insertMany([req.body], (err, result) => {
         if(err) {
-          res.send(HtmlResponse.putErrorResponse);
+            res.send(HtmlResponse.putErrorResponse);
             process.exit(0);
         }
         res.send(HtmlResponse.putSuccessResponse);
