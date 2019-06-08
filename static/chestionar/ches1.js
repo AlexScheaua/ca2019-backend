@@ -111,6 +111,9 @@ async function draw() {
 
 
   }
+  str+= `<div class="submit col-lg-7 col-sm-8 col-xs-12">
+    <input type="submit" class="btn btn-dark " name="" value="Trimite">
+  </div>`
   document.querySelector("#form").innerHTML = str;
 
 }
