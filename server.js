@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express();
 
 app.use(express.static(path.join(__dirname, './static')));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 const mongoUrl = 'mongodb+srv://general:general@cluster0-yu4bb.mongodb.net/test?retryWrites=true&w=majority'
 
 MongoClient.connect(mongoUrl, {
@@ -59,47 +59,46 @@ app.get('/api/form/:form', (req, res) => {
 })
 
 app.post('/api/form/1', (req, res) => {
-  res.send(req.body);
-  // MongoClient.connect(mongoUrl, {
-  //   useNewUrlParser: true
-  // }, (err, db) => {
-  //   if (err) {
-  //     console.log(err);
-  //     process.exit(0);
-  //   }
-  //   var database = db.db('root');    
-  //   var collection = database.collection('formfeedback');
-  //   collection.insertMany(req.body, (err, result) => {
-  //       if(err) {
-  //           console.log(err);
-  //           process.exit(0);
-  //       }
-  //       db.close();
-  //   });
-  // });
   
+  res.send(req.body);
+  
+  MongoClient.connect(mongoUrl, {
+    useNewUrlParser: true
+  }, (err, db) => {
+    if (err) {
+      console.log(err);
+      process.exit(0);
+    }
+    var database = db.db('root');    
+    var collection = database.collection('formfeedback');
+    collection.insertMany([req.body], (err, result) => {
+        if(err) {
+            console.log(err);
+            process.exit(0);
+        }
+        db.close();
+    });
+  });
 });
 
 app.post('/api/form/2', (req, res) => {
-  res.send(req.body);
-  // MongoClient.connect(mongoUrl, {
-  //   useNewUrlParser: true
-  // }, (err, db) => {
-  //   if (err) {
-  //     console.log(err);
-  //     process.exit(0);
-  //   }
-  //   var database = db.db('root');    
-  //   var collection = database.collection('formincident');
-  //   collection.insertMany(req.body, (err, result) => {
-  //       if(err) {
-  //           console.log(err);
-  //           process.exit(0);
-  //       }
-  //       db.close();
-  //   });
-  // });
-  
+  MongoClient.connect(mongoUrl, {
+    useNewUrlParser: true
+  }, (err, db) => {
+    if (err) {
+      console.log(err);
+      process.exit(0);
+    }
+    var database = db.db('root');    
+    var collection = database.collection('formincident');
+    collection.insertMany([req.body], (err, result) => {
+        if(err) {
+            console.log(err);
+            process.exit(0);
+        }
+        db.close();
+    });
+  });
 });
 
 const port = process.env.PORT || 3000;
