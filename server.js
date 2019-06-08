@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const MongoClient = require('mongodb')
 const bodyParser = require('body-parser');
-const cors = require('cors')
+const cors = require('cors');
+const HtmlResponse = require('./src/HtmlResponse');
 
 const app = express();
 
@@ -60,8 +61,6 @@ app.get('/api/form/:form', (req, res) => {
 
 app.post('/api/form/1', (req, res) => {
   
-  res.send(req.body);
-  
   MongoClient.connect(mongoUrl, {
     useNewUrlParser: true
   }, (err, db) => {
@@ -73,9 +72,10 @@ app.post('/api/form/1', (req, res) => {
     var collection = database.collection('formfeedback');
     collection.insertMany([req.body], (err, result) => {
         if(err) {
-            console.log(err);
+          res.send(HtmlResponse.putErrorResponse);
             process.exit(0);
         }
+        res.send(HtmlResponse.putSuccessResponse);
         db.close();
     });
   });
@@ -93,9 +93,10 @@ app.post('/api/form/2', (req, res) => {
     var collection = database.collection('formincident');
     collection.insertMany([req.body], (err, result) => {
         if(err) {
-            console.log(err);
+          res.send(HtmlResponse.putErrorResponse);
             process.exit(0);
         }
+        res.send(HtmlResponse.putSuccessResponse);
         db.close();
     });
   });
