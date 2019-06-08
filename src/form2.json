@@ -1,0 +1,302 @@
+[
+    {
+        "label": "Denumire spital:",
+        "type": "adresa",
+        "name": "denumire_spital"
+    },
+    {
+        "label": "Sectia in care se afla pacientul chestionat:",
+        "type": "",
+        "name": "pacient_chestionat"
+    },
+    {
+        "type": "paragraph",
+        "label": "Date demografice:",
+        "name": "date_demografice"
+    },
+    {
+        "label": "Cate paturi avea salonul?",
+        "type": "number",
+        "name": "paturi"
+    },
+    {
+        "label": "Data completarii:",
+        "type": "date",
+        "name": "data"
+    },
+    {
+        "label": "Sex:",
+        "type": "radio",
+        "name": "sex",
+        "options": [
+            "Masculin",
+            "Feminin"
+        ]
+    },
+    {
+        "label": "Varsta:",
+        "type": "number",
+        "name": "varsta"
+    },
+    {
+        "label": "Mediu de rezidenta/unde locuiti:",
+        "type": "radio",
+        "name": "rezidenta",
+        "options": [
+            "Urban",
+            "Rural"
+        ]
+    },
+    {
+        "label": "Studii:",
+        "type": "radio",
+        "name": "studii",
+        "options": [
+            "primare",
+            "medii",
+            "universitare",
+            "postuniversitare"
+        ]
+    },
+    {
+        "label": "Cate zile ati fost internat in spital?",
+        "type": "number",
+        "name": "internare"
+    },
+    {
+        "label": "La internare ați fost informat cu privire la regulile de comportament în spital?",
+        "type": "radio",
+        "name": "informare",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "La internare ați fost informat cu privire la regulile de igienă personală în spital?",
+        "type": "radio",
+        "name": "igiena",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Ați fost întrebat dacă aveți nevoie de asistență spirituală?",
+        "type": "radio",
+        "name": "asistenta_spirituala",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "La internare ați fost informat cu privire la riscul de cădere / alunecare în incinta spitalului?",
+        "type": "radio",
+        "name": "cadere_alunecare",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Cine v-a adus/v-a însoțit de la serviciul internări până în salon?",
+        "type": "radio",
+        "name": "insotitor",
+        "options": [
+            "personalul sanitar",
+            "familia sau prieteni",
+            "nu am fost insotit de nimeni"
+        ]
+    },
+    {
+        "label": "În salonul dumneavoastră se face curățenie:",
+        "type": "radio",
+        "name": "curatenie",
+        "options": [
+            "o data pe zi",
+            "de doua ori pe zi",
+            "de cate ori este necesar pe zi"
+        ]
+    },
+    {
+        "label": "În deplasarea prin spital pentru investigații și / sau consult și / sau tratament ați fost însoțit de:",
+        "type": "radio",
+        "name": "deplasare",
+        "options": [
+            "personalul sanitar",
+            "familie,prieteni",
+            "nu am fost insotit de nimeni"
+        ]
+    },
+    {
+        "label": "Tratamentul și investigațiile recomandate de către medicul curant v-au fost explicate pe înțelesul dumneavoastră?",
+        "type": "radio",
+        "name": "tratament",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Îngrijirile pe care le-ați primit sau urmează să le primiți v-au fost explicate pe înțelesul dumneavoastră?",
+        "type": "radio",
+        "name": "ingrijiri",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Diagnosticul comunicat de către medicul curant v-a fost explicat pe înțelesul dumneavoastră?",
+        "type": "radio",
+        "name": "diagnostic",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Cunoașteți identitatea și statutul profesional al echipei medicale (medic, asistente, infirmiere) implicate în îngrijirea dumneavoastră?",
+        "type": "radio",
+        "name": "identitate",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Vi s-au explicat riscurile medicației prescrise și riscurile asocierilor de medicamente pe care le primiţi?",
+        "type": "radio",
+        "name": "riscuri",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Puteți să numiți un efect advers sau risc posibil al medicației pe care o utilizați?",
+        "type": "radio",
+        "name": "risc",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Dacă DA, se pot da exemple:",
+        "type": "textarea",
+        "rows": 4,
+        "name": "exemple_risc"
+    },
+    {
+        "label": "Ați cumpărat sau v-a cumpărat familia medicamente sau alte materiale medicale necesare tratamentului pe perioada spitalizării?",
+        "type": "radio",
+        "name": "materiale_medicale",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Personalul medical utilizează mănuși de unică folosință la fiecare activitate medicală sau de îngrijire?",
+        "type": "radio",
+        "name": "personalul_medical",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Ați fost informat cu privire la momentul externării?",
+        "type": "radio",
+        "name": "momentul_externarii",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Ați fost informat cu privire la existența chestionarului de satisfacție a pacientului?",
+        "type": "radio",
+        "name": "chestionar_satisfactie",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Ați fost informat cu privire la modalitatea de completare și locul de depunere a chestionarului de satisfacție a pacientului?",
+        "type": "radio",
+        "name": "modalitate_completare",
+        "options": [
+            "DA",
+            "NU"
+        ]
+    },
+    {
+        "label": "Cum apreciați, din punct de vedere al confortului, următoarele condiții din spital?",
+        "type": "radio",
+        "name": "conditii_spital",
+        "options": [
+            "Foarte bune",
+            "Bune",
+            "Nici bune, nici proaste",
+            "Proaste",
+            "Foarte proaste"
+        ]
+    },
+    {
+        "label": "CHESTIONARUL PACIENTULUI (unde 1 = extrem de nemultumit si 5 = foarte multumit)",
+        "type": "paragraph",
+        "name": "chestionarul_pacientului"
+    },
+    {
+        "label": "Iluminatul spaţiilor/încăperilor din spital",
+        "type": "radio",
+        "name": "iluminat",
+        "options": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "label": "Temperatura din spital",
+        "type": "radio",
+        "name": "temperatura_spital",
+        "options": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "label": "Programul de primire a vizitelor",
+        "type": "radio",
+        "name": "program_vizite",
+        "options": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "label": "Funcționalitatea grupurilor sanitare",
+        "type": "radio",
+        "name": "grupuri_sanitare",
+        "options": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    }
+]
