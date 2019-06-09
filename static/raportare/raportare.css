@@ -1,0 +1,12 @@
+.title-container>h1{
+    margin: 30px 0;
+}
+
+#raports-input {
+    height: 50px;
+}
+
+#raports-input>div {
+    height: 30px;
+    margin: 0 5px;
+}

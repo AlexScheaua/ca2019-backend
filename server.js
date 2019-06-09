@@ -3,13 +3,14 @@ const path = require('path');
 const MongoClient = require('mongodb')
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const HtmlResponse = require('./src/htmlResponse');
+
 const fs = require('fs');
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, './static')));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 const mongoUrl = 'mongodb+srv://general:general@cluster0-yu4bb.mongodb.net/test?retryWrites=true&w=majority'
 
 MongoClient.connect(mongoUrl, {
@@ -60,8 +61,6 @@ app.get('/api/form/:form', (req, res) => {
     let form = require('./src/form2.json');
     res.status(200).send(form);
   }
-
-
 })
 
 app.post('/api/form/1', (req, res) => {
@@ -107,7 +106,8 @@ app.post('/api/form/2', (req, res) => {
   });
 });
 
-app.get('/api/raport', (req, res) => {
+app.put('/api/raport', (req, res) => {
+  console.log(req.body)
   MongoClient.connect(mongoUrl, {
     useNewUrlParser: true
   }, (err, db) => {
@@ -119,9 +119,7 @@ app.get('/api/raport', (req, res) => {
     var collection = database.collection('formfeedback');
 
     collection.find({}, {
-      projection: {
-        etapa_eveniment: true
-      }
+      projection: req.body 
     }).toArray((err, result) => {
       res.send(result);
     })

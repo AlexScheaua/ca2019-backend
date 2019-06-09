@@ -22,7 +22,6 @@ async function ajax(method, url, body, callback, rejectCallback) {
     xhttp.open(method, url, true);
     xhttp.send(body);
   })
-
 };
 
 async function getQuestions() {
